@@ -1,0 +1,15 @@
+{
+  "name": "electron_customtitlebar",
+  "version": "1.0.0",
+  "description": "a custom title bar within an electron app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Aidan Kelly",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^18.2.0"
+  }
+}

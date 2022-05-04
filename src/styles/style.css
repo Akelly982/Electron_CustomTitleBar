@@ -1,0 +1,163 @@
+
+:root{
+    --topBar: #1b1d23;
+    --subMenu: #272c36;
+    --background: #2c313c;
+    --border: #343b48;
+    --active: #4f9fee;
+
+    --hover: var(--active);
+
+    /* text--------- */
+    --text2: #949aa7;
+    --text3: #e8e8e8;
+    --text: var(--text3);
+
+    --btnWidth: 15px;
+    --btnHeight: 15px;
+}
+
+
+/* --------------------------------- */
+
+
+body{
+    margin: 0px;
+}
+
+.topBar{
+    background-color: var(--topBar);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+
+    /* this stops users from being able to select / highlight text elements  */
+    -webkit-user-select: none;
+    user-select:none;    
+    /*  you need to add this second line to avoid an error */
+}
+
+.titleBar{
+    padding-left:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.topBarMainImg{
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.title{
+    font-size: 20px;
+    color: var(--text);
+    align-self: center;
+
+    /* this paramater allows us to drage the 
+    whole window by this element  */
+    /* if this is included over a button it causes issues */
+    -webkit-app-region: drag;
+}
+
+.toggleButton{
+    margin-right: 20px;
+    border-style: none;
+    width: 30px;
+    height: 25px;
+
+    background-color: transparent;
+    background-image: url('../icons/icon_menu3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.toggleButton:hover{
+    border-style: dotted;
+    border-color: var(--hover);
+}
+
+.titleBarButtons{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.topBtn{
+    width: var(--btnWidth);
+    height: var(--btnHeight);
+    border-style: none;
+    background-color: transparent;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.minimizeBtn {
+    background-image: url('../icons/icon_minimize.png');
+}
+
+.maximizeBtn {
+    background-image: url('../icons/icon_maximize.png');
+}
+
+.closeBtn{
+    background-image: url('../icons/icon_close.png');
+}
+.restoreBtn{
+    background-image: url('../icons/icon_restore.png');
+}
+
+/* should be no spaces bewtwen className:hover */
+.minimizeBtn:hover{
+    border-style: dotted;
+    border-color: var(--hover); 
+}
+.maximizeBtn:hover{
+    border-style: dotted;
+    border-color: var(--hover); 
+}
+.closeBtn:hover{
+    border-style: dotted;
+    border-color: var(--hover); 
+}
+.restoreBtn:hover{
+    border-style: dotted;
+    border-color: var(--hover); 
+}
+
+.contentArea{
+    height: 700px;
+    display:flex;
+    flex-direction: row;
+
+}
+
+.leftMenu{
+    background-color: var(--subMenu);
+    width: 280px;
+}
+
+.content{
+    background-color: var(--background);
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentText{
+    color: var(--text);
+    max-width: 300px;
+
+}

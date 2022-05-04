@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Custom App title bar</title>
+    <link rel="styleSheet" href="styles/style.css">
+    <script defer src="js/appFunctions.js"></script>
+  </head>
+  <body>
+    <div class="mainApp">
+
+      <div class="topBar">
+        <div class="titleBar">
+            <button id="showHideMenu" class="toggleButton"></button>
+            <img class="topBarMainImg" src="icons/icon_topBar.png">
+            <div class="title">
+              Custom Top bar title app
+            </div>
+        </div>
+        <div class="titleBarButtons">
+            <!-- Note use of title to show tool tips to end user on button elements -->
+            <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimize"></button>   
+            <button id="maxResBtn" class="topBtn maximizeBtn" title="Maximize"></button>
+            <button id="closeBtn" class="topBtn closeBtn" title="Restore"></button>
+        </div>
+      </div>
+
+      <div class="contentArea">
+        <div id="mySideBar" class="leftMenu">
+        </div>
+        <div class="content">
+          <p class="contentText">
+            We are using Node.js <span id="node-version"></span>,
+            Chromium <span id="chrome-version"></span>,
+            and Electron <span id="electron-version"></span>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+  <script src="../renderer.js"></script>
+</html>
